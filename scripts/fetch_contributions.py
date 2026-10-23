@@ -9,7 +9,7 @@ from html import escape
 USER = "gptshivam595"
 ROOT = Path(__file__).resolve().parents[1]
 UA = "Mozilla/5.0 (compatible; contribution-skyline/1.0)"
-COLORS = ["#101b2b", "#14516b", "#0e8ab1", "#3b82f6", "#a855f7", "#fb923c"]
+COLORS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#56d364"]
 
 def get_text(url: str, accept: str = "text/html") -> str:
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": accept})
