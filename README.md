@@ -1,25 +1,109 @@
-<h1 align="center">Hi 👋, I'm Shivam</h1>
-<h3 align="center">A passionate software developer from India</h3>
+<div align="center">
 
-<img align="right" alt="coding" width="400" src="https://camo.githubusercontent.com/19db51af5f90f1b152bc0b9078f5fe97053955be5074f03f17019c70345bdcdb/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313336302f302a37513379765349765f7430696f4a2d5a2e676966">
+# Hi 👋, I'm Shivam
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=gptshivam595&label=Profile%20views&color=0e75b6&style=flat" alt="gptshivam595" /> </p>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=800&color=58A6FF&center=true&vCenter=true&width=620&height=36&lines=Product+Manager;AI+%26+Technology+Enthusiast;Turning+User+Problems+into+Products" alt="Product Manager | AI and Technology" />
 
-- 📫 How to reach me **gptshivam595@gmail.com**
+**I turn user problems into AI-powered products through research, product strategy, and hands-on building.**
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/shivam-guptabit" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="shivam-guptabit" height="30" width="40" /></a>
-<a href="https://instagram.com/gptshivam595" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="gptshivam595" height="30" width="40" /></a>
-<a href="https://www.codechef.com/users/gptshivam" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="gptshivam" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/gptshivam595" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="gptshivam595" height="30" width="40" /></a>
-</p>
+<img src="https://img.shields.io/badge/AI_Products-1d4ed8?style=for-the-badge" alt="AI Products" />
+<img src="https://img.shields.io/badge/Product_Strategy-7c3aed?style=for-the-badge" alt="Product Strategy" />
+<img src="https://img.shields.io/badge/User_Research-0891b2?style=for-the-badge" alt="User Research" />
+<img src="https://img.shields.io/badge/Prototyping-a21caf?style=for-the-badge" alt="Prototyping" />
+<img src="https://img.shields.io/badge/Growth-059669?style=for-the-badge" alt="Growth" />
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> </p>
+📍 India · ✉️ [gptshivam595@gmail.com](mailto:gptshivam595@gmail.com) · [Portfolio](https://gptshivam595.github.io/)
 
-<h3 align="center">Contributions</h3>
+</div>
+
+---
+
+## Product mindset
+
+| Discover | Define | Build | Measure |
+|---|---|---|---|
+| Understand user problems | Prioritize the right opportunity | Prototype focused solutions | Learn from data and iterate |
+
+## Featured product work
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🤖 VisualEval Multi-Agent
+
+Evaluates AI-generated fashion imagery through multiple Indian audience perspectives, emphasizing cultural fit and visual relevance.
+
+**AI Evaluation** · **Multi-Agent** · **User Context**
+
+[Explore project →](https://github.com/gptshivam595/VisualEval-MultiAgent)
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 AI B2C Lead Intelligence
+
+Transforms messy B2C lead data into structured insights, prioritized opportunities, and personalized outreach.
+
+**AI Workflows** · **Data Quality** · **Sales Productivity**
+
+[Explore project →](https://github.com/gptshivam595/AI-b2c-lead-intelligence)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 💬 Customer Feedback Analysis
+
+A prototype for organizing customer feedback into themes that can inform product decisions.
+
+**Customer Insights** · **Product Analytics** · **AI**
+
+[View prototype →](https://customer-feedback-analysis-tool.ai.studio/)
+
+</td>
+<td width="50%" valign="top">
+
+### 🗓️ Clinical Staff Scheduling
+
+A workflow-oriented scheduling tool focused on staffing constraints and operational coordination.
+
+**Workflow Design** · **Scheduling** · **Productivity**
+
+[Explore project →](https://github.com/gptshivam595/clinical-staff-scheduling-compliance)
+
+</td>
+</tr>
+</table>
+
+## Tools I work with
+
 <p align="center">
-<img width="860" src="https://raw.githubusercontent.com/gptshivam595/my-profile/main/profile-heatmap/heatmap.png" alt="Contribution heatmap. Each square is one day. Darker green means more public contributions." />
+  <img src="https://skillicons.dev/icons?i=java,python,js,ts,react,spring,mysql,html,css,git,docker,postman&theme=dark&perline=12" alt="Languages and development tools" />
 </p>
-<p align="center"><sub>Real public contributions for the last year.</sub></p>
+
+## Contributions in Motion
+
+<p align="center">
+  <a href="https://gptshivam595.github.io/">
+    <img src="./assets/contribution-preview.svg" width="100%" alt="GitHub contribution heatmap preview. Click to switch between the interactive 2D heatmap and 3D skyline." />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://gptshivam595.github.io/"><strong>Open the interactive 2D heatmap ↔ 3D skyline →</strong></a><br>
+  <sub>One contribution graph, two views. Hover a day for its count; drag the 3D view to orbit.</sub>
+</p>
+
+## Connect
+
+<p align="center">
+  <a href="https://linkedin.com/in/shivam-guptabit"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://instagram.com/gptshivam595"><img src="https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+  <a href="https://leetcode.com/gptshivam595"><img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
+  <a href="https://www.codechef.com/users/gptshivam"><img src="https://img.shields.io/badge/CodeChef-Profile-5B4638?style=for-the-badge&logo=codechef&logoColor=white" alt="CodeChef" /></a>
+  <a href="mailto:gptshivam595@gmail.com"><img src="https://img.shields.io/badge/Email-Say_Hello-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+</p>
+
+<p align="center"><em>Build with purpose. Learn through experiments. Make products people love.</em></p>
