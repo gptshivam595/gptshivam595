@@ -12,7 +12,7 @@
 <img src="https://img.shields.io/badge/Prototyping-a21caf?style=for-the-badge" alt="Prototyping" />
 <img src="https://img.shields.io/badge/Growth-059669?style=for-the-badge" alt="Growth" />
 
-📍 India · ✉️ [gptshivam595@gmail.com](mailto:gptshivam595@gmail.com) · [Portfolio](https://gptshivam595.github.io/)
+📍 India · ✉️ [gptshivam595@gmail.com](mailto:gptshivam595@gmail.com) · [Contribution heatmap](https://gptshivam595.github.io/)
 
 </div>
 
@@ -83,17 +83,17 @@ A workflow-oriented scheduling tool focused on staffing constraints and operatio
   <img src="https://skillicons.dev/icons?i=java,python,js,ts,react,spring,mysql,html,css,git,docker,postman&theme=dark&perline=12" alt="Languages and development tools" />
 </p>
 
-## Contributions in Motion
+## Contributions
 
 <p align="center">
   <a href="https://gptshivam595.github.io/">
-    <img src="./assets/contribution-preview.svg" width="100%" alt="GitHub contribution heatmap preview. Click to switch between the interactive 2D heatmap and 3D skyline." />
+    <img src="./assets/contribution-preview.svg" width="100%" alt="GitHub contribution heatmap preview. Click to open the interactive heatmap." />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://gptshivam595.github.io/"><strong>Open the interactive 2D heatmap ↔ 3D skyline →</strong></a><br>
-  <sub>One contribution graph, two views. Hover a day for its count; drag the 3D view to orbit.</sub>
+  <a href="https://gptshivam595.github.io/"><strong>Open the interactive contribution heatmap →</strong></a><br>
+  <sub>Hover a day for details and use the arrow keys to explore.</sub>
 </p>
 
 ## Connect

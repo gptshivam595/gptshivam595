@@ -1,4 +1,4 @@
-name: Contribution Skyline (2D + 3D)
+name: Refresh contribution heatmap
 
 on:
   push:
@@ -13,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: contribution-skyline-pages
+  group: contribution-heatmap-pages
   cancel-in-progress: true
 
 jobs:
@@ -22,32 +22,26 @@ jobs:
     environment:
       name: github-pages
     steps:
-      - name: Check out this profile repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Fetch real public data and generate README preview
+      - name: Generate heatmap data and preview
         run: python scripts/fetch_contributions.py
-      - name: Commit refreshed preview if changed
+      - name: Commit refreshed preview
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+gptshivam595@users.noreply.github.com"
           git add assets/contribution-preview.svg
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh contribution heatmap preview"
+            git commit -m "Refresh contribution heatmap"
             git pull --rebase origin main
             git push origin HEAD:main
-          else
-            echo "Contribution preview is current."
           fi
-      - name: Upload static interactive site
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: site
-      - name: Deploy to GitHub Pages
+      - uses: actions/deploy-pages@v4
         id: deployment
-        uses: actions/deploy-pages@v4
