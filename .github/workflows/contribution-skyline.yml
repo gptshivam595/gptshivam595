@@ -35,7 +35,7 @@ jobs:
       - name: Commit refreshed preview if changed
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+gptshivam595@users.noreply.github.com"
           git add assets/contribution-preview.svg
           if ! git diff --cached --quiet; then
             git commit -m "Refresh contribution heatmap preview"
@@ -44,10 +44,6 @@ jobs:
           else
             echo "Contribution preview is current."
           fi
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - name: Upload static interactive site
         uses: actions/upload-pages-artifact@v3
         with:
@@ -55,5 +51,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-    outputs:
-      page_url: ${{ steps.deployment.outputs.page_url }}
