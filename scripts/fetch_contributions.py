@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fetch public GitHub contribution counts and build the README heatmap preview."""
 from __future__ import annotations
-import re, urllib.request
+import json, re, urllib.request
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from html import escape
@@ -153,6 +153,13 @@ def main() -> None:
         "days": days, "total": sum(d["count"] for d in days),
         "updatedAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
     }
+    public = ROOT / "public"
+    public.mkdir(exist_ok=True)
+    (public / "contributions.json").write_text(
+        json.dumps({"username": USER, "start": days[0]["date"], "end": days[-1]["date"], "days": days,
+                    "total": payload["total"], "updatedAt": payload["updatedAt"]}, separators=(",", ":")) + "\n",
+        encoding="utf-8",
+    )
     assets = ROOT / "assets"
     assets.mkdir(exist_ok=True)
     (assets / "contribution-preview.svg").write_text(make_preview(payload), encoding="utf-8")

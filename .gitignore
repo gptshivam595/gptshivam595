@@ -1,5 +1,6 @@
 node_modules/
 dist/
+public/contributions.json
 .env
 .env.*
 !.env.example
