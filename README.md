@@ -126,12 +126,19 @@ A workflow-oriented scheduling tool focused on staffing constraints and operatio
 
 ## Contributions
 
-<p align="center">
+<table>
+<tr>
+<td width="50%" valign="top">
   <img src="./assets/contribution-preview.svg" width="100%" alt="GitHub contribution heatmap showing the last year's public activity." />
-</p>
+</td>
+<td width="50%" valign="top">
+  <img src="./assets/contribution-skyline-preview.svg" width="100%" alt="Static isometric 3D GitHub contribution skyline showing the last year's public activity." />
+</td>
+</tr>
+</table>
 
 <p align="center">
-  <sub>Actual public GitHub activity, refreshed automatically from the contribution calendar.</sub>
+  <sub>Static 2D and 3D previews use the same public GitHub activity. The interactive toggle and orbit controls remain available in the standalone application.</sub>
 </p>
 
 ## Connect
