@@ -134,109 +134,6 @@ def make_preview(payload: dict) -> str:
 {''.join(f'<rect x="{900 + i*20}" y="285" width="13" height="13" rx="3" fill="{color}"/>' for i, color in enumerate(COLORS))}
 <text x="1020" y="294" fill="#8b949e" font-size="12" font-family="Arial,sans-serif">More</text></svg>'''
 
-def make_3d_preview(payload: dict) -> str:
-    days = payload["days"]
-    positive = sorted(d["count"] for d in days if d["count"] > 0)
-    cuts = [quantile(positive, p) for p in (.25, .5, .75, .95)]
-    weeks = [days[i:i + 7] for i in range(0, len(days), 7)]
-    width, height = 1100, 420
-    origin_x, origin_y = 72, 278
-    week_step = (13, -5)
-    day_step = (13, 5)
-    cell_week = (10, -3.8)
-    cell_day = (10, 3.8)
-    max_count = max((day["count"] for day in days), default=1)
-
-    def point_add(point: tuple[float, float], vector: tuple[float, float], scale: float = 1) -> tuple[float, float]:
-        return point[0] + vector[0] * scale, point[1] + vector[1] * scale
-
-    def polygon(points: list[tuple[float, float]]) -> str:
-        return " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
-
-    def cell_origin(week: int, row: int) -> tuple[float, float]:
-        return (
-            origin_x + week * week_step[0] + row * day_step[0],
-            origin_y + week * week_step[1] + row * day_step[1],
-        )
-
-    grid = []
-    columns = []
-    for week_index, week in enumerate(weeks):
-        for row, day in enumerate(week):
-            base = cell_origin(week_index, row)
-            top = [
-                base,
-                point_add(base, cell_week),
-                point_add(point_add(base, cell_week), cell_day),
-                point_add(base, cell_day),
-            ]
-            grid.append(
-                f'<polygon points="{polygon(top)}" fill="#161b22" stroke="#30363d" stroke-width=".7"/>'
-            )
-            height_scale = 4 + (day["count"] / max_count) * 44 if day["count"] else 2
-            raised = [(x, y - height_scale) for x, y in top]
-            color = COLORS[level(day["count"], cuts)]
-            columns.append(
-                (
-                    week_index + row,
-                    f'<polygon points="{polygon([top[3], top[2], raised[2], raised[3]])}" fill="#0b6b35" stroke="#0d1117" stroke-width=".5"/>'
-                    f'<polygon points="{polygon([top[1], top[2], raised[2], raised[1]])}" fill="#168545" stroke="#0d1117" stroke-width=".5"/>'
-                    f'<polygon points="{polygon(raised)}" fill="{color}" stroke="#0d1117" stroke-width=".5">'
-                    f'<title>{escape(day["date"])}: {day["count"]} contribution(s)</title></polygon>'
-                )
-            )
-
-    marks, previous = [], ""
-    for week_index, week in enumerate(weeks):
-        if week:
-            key = week[0]["date"][:7]
-            if key != previous:
-                marks.append((week_index, date.fromisoformat(week[0]["date"]).strftime("%b")))
-                previous = key
-    month_labels = "".join(
-        f'<text x="{cell_origin(week, 0)[0] + 2:.1f}" y="{cell_origin(week, 0)[1] - 18:.1f}" fill="#8b949e" font-size="12" font-family="Arial,sans-serif">{escape(label)}</text>'
-        for week, label in marks
-    )
-
-    total = payload["total"]
-    busiest = max(days, key=lambda day: day["count"])
-    longest, current = streak_stats(days)
-    longest_range = f"{date_label(longest['start'])} — {date_label(longest['end'])}" if longest["start"] else "—"
-    current_range = f"{date_label(current['start'])} — {date_label(current['end'])}" if current["start"] else "—"
-    stats = [
-        ("1 year total", f"{total:,}", "contributions", f"{date_label(payload['start'])} — {date_label(payload['end'])}"),
-        ("Busiest day", f"{busiest['count']:,}", "contributions", date_label(busiest["date"])),
-        ("Longest streak", f"{longest['days']:,}", "days", longest_range),
-        ("Current streak", f"{current['days']:,}", "days", current_range),
-    ]
-    stat_markup = []
-    for index, (label, value, unit, sub) in enumerate(stats):
-        x = 835 if index % 2 == 0 else 970
-        y = 102 + (index // 2) * 78
-        stat_markup.append(
-            f'<text x="{x}" y="{y}" fill="#8b949e" font-size="12" font-family="Arial,sans-serif">{label}</text>'
-            f'<text x="{x}" y="{y + 28}" fill="#39d353" font-size="25" font-weight="700" font-family="Arial,sans-serif">{value}</text>'
-            f'<text x="{x + 44}" y="{y + 28}" fill="#f0f6fc" font-size="12" font-family="Arial,sans-serif">{unit}</text>'
-            f'<text x="{x}" y="{y + 47}" fill="#8b949e" font-size="10" font-family="Arial,sans-serif">{escape(sub)}</text>'
-        )
-    legend = "".join(
-        f'<rect x="{840 + index * 20}" y="368" width="13" height="13" rx="3" fill="{color}"/>'
-        for index, color in enumerate(COLORS)
-    )
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
-    <title id="title">Shivam's 3D GitHub contribution skyline</title>
-    <desc id="desc">{total} contributions in the last year, shown as a static isometric contribution skyline.</desc>
-    <rect width="100%" height="100%" rx="18" fill="#0d1117"/><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="17" fill="none" stroke="#30363d"/>
-    <text x="26" y="38" fill="#f0f6fc" font-size="19" font-family="Arial,sans-serif"><tspan font-weight="700">{total:,}</tspan> contributions · 3D skyline preview</text>
-    <g>{''.join(grid)}</g>
-    <g>{''.join(item for _, item in sorted(columns, key=lambda item: item[0]))}</g>
-    <g>{month_labels}</g>
-    <line x1="810" y1="63" x2="810" y2="330" stroke="#30363d"/>
-    <g>{''.join(stat_markup)}</g>
-    <text x="26" y="389" fill="#8b949e" font-size="12" font-family="Arial,sans-serif">Same public GitHub activity · static README preview</text>
-    <text x="790" y="378" fill="#8b949e" font-size="12" font-family="Arial,sans-serif">Less</text>{legend}<text x="950" y="378" fill="#8b949e" font-size="12" font-family="Arial,sans-serif">More</text>
-    </svg>'''
-
 def main() -> None:
     today = date.today()
     start = today - timedelta(days=364)
@@ -266,7 +163,6 @@ def main() -> None:
     assets = ROOT / "assets"
     assets.mkdir(exist_ok=True)
     (assets / "contribution-preview.svg").write_text(make_preview(payload), encoding="utf-8")
-    (assets / "contribution-skyline-preview.svg").write_text(make_3d_preview(payload), encoding="utf-8")
     print(f"Generated {len(days)} dates from {payload['start']} to {payload['end']}; total={payload['total']}")
 
 if __name__ == "__main__":
