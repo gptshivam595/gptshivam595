@@ -20,9 +20,46 @@
 
 ## Product mindset
 
-| Discover | Define | Build | Measure |
-|---|---|---|---|
-| Understand user problems | Prioritize the right opportunity | Prototype focused solutions | Learn from data and iterate |
+<table>
+<tr>
+<td width="25%" valign="top">
+
+<sub>01</sub>
+
+### Discover
+
+Understand user problems.
+
+</td>
+<td width="25%" valign="top">
+
+<sub>02</sub>
+
+### Define
+
+Prioritize the right opportunity.
+
+</td>
+<td width="25%" valign="top">
+
+<sub>03</sub>
+
+### Build
+
+Prototype focused solutions.
+
+</td>
+<td width="25%" valign="top">
+
+<sub>04</sub>
+
+### Measure
+
+Learn from data and iterate.
+
+</td>
+</tr>
+</table>
 
 ## Featured product work
 
@@ -36,7 +73,8 @@ Evaluates AI-generated fashion imagery through multiple Indian audience perspect
 
 **AI Evaluation** · **Multi-Agent** · **User Context**
 
-[Explore project →](https://github.com/gptshivam595/VisualEval-MultiAgent)
+<sub>Explore project ↗</sub><br />
+[github.com/gptshivam595/VisualEval-MultiAgent](https://github.com/gptshivam595/VisualEval-MultiAgent)
 
 </td>
 <td width="50%" valign="top">
@@ -47,7 +85,8 @@ Transforms messy B2C lead data into structured insights, prioritized opportuniti
 
 **AI Workflows** · **Data Quality** · **Sales Productivity**
 
-[Explore project →](https://github.com/gptshivam595/AI-b2c-lead-intelligence)
+<sub>Explore project ↗</sub><br />
+[github.com/gptshivam595/AI-b2c-lead-intelligence](https://github.com/gptshivam595/AI-b2c-lead-intelligence)
 
 </td>
 </tr>
@@ -60,7 +99,8 @@ A prototype for organizing customer feedback into themes that can inform product
 
 **Customer Insights** · **Product Analytics** · **AI**
 
-[View prototype →](https://customer-feedback-analysis-tool.ai.studio/)
+<sub>View prototype ↗</sub><br />
+[customer-feedback-analysis-tool.ai.studio](https://customer-feedback-analysis-tool.ai.studio/)
 
 </td>
 <td width="50%" valign="top">
@@ -71,7 +111,8 @@ A workflow-oriented scheduling tool focused on staffing constraints and operatio
 
 **Workflow Design** · **Scheduling** · **Productivity**
 
-[Explore project →](https://github.com/gptshivam595/clinical-staff-scheduling-compliance)
+<sub>Explore project ↗</sub><br />
+[github.com/gptshivam595/clinical-staff-scheduling-compliance](https://github.com/gptshivam595/clinical-staff-scheduling-compliance)
 
 </td>
 </tr>
