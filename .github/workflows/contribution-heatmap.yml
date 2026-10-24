@@ -9,18 +9,14 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: contribution-heatmap-pages
+  group: contribution-heatmap
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  refresh:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,7 +26,7 @@ jobs:
           python-version: "3.12"
       - name: Generate heatmap data and preview
         run: python scripts/fetch_contributions.py
-      - name: Commit refreshed preview
+      - name: Commit refreshed README preview
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+gptshivam595@users.noreply.github.com"
@@ -40,8 +36,3 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-      - uses: actions/deploy-pages@v4
-        id: deployment

@@ -12,7 +12,7 @@
 <img src="https://img.shields.io/badge/Prototyping-a21caf?style=for-the-badge" alt="Prototyping" />
 <img src="https://img.shields.io/badge/Growth-059669?style=for-the-badge" alt="Growth" />
 
-📍 India · ✉️ [gptshivam595@gmail.com](mailto:gptshivam595@gmail.com) · [Contribution heatmap](https://gptshivam595.github.io/)
+📍 India · ✉️ [gptshivam595@gmail.com](mailto:gptshivam595@gmail.com)
 
 </div>
 
@@ -86,14 +86,11 @@ A workflow-oriented scheduling tool focused on staffing constraints and operatio
 ## Contributions
 
 <p align="center">
-  <a href="https://gptshivam595.github.io/">
-    <img src="./assets/contribution-preview.svg" width="100%" alt="GitHub contribution heatmap preview. Click to open the interactive heatmap." />
-  </a>
+  <img src="./assets/contribution-preview.svg" width="100%" alt="GitHub contribution heatmap showing the last year's public activity." />
 </p>
 
 <p align="center">
-  <a href="https://gptshivam595.github.io/"><strong>Open the interactive contribution heatmap →</strong></a><br>
-  <sub>Hover a day for details and use the arrow keys to explore.</sub>
+  <sub>Actual public GitHub activity, refreshed automatically from the contribution calendar.</sub>
 </p>
 
 ## Connect
